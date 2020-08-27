@@ -8,12 +8,12 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		 try {
-	            Connection conexion = conexionDataBase.crearConexion();
+	            Connection conexion = ConexionDataBase.crearConexion();
 
 	            String query = "INSERT INTO category (category_name) VALUES ('prueba')";
-	            conexionDataBase.sentencia.execute(query);
+	            ConexionDataBase.sentencia.execute(query);
 	            System.out.println("GUARDADO EXITOSO");
-	            conexionDataBase.cerrarConexion();
+	            ConexionDataBase.cerrarConexion();
 
 	        } catch (ClassNotFoundException e) {
 	            // TODO Auto-generated catch block
