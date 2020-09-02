@@ -18,7 +18,7 @@ public class Principal {
 			ConexionDataBase.crearConexion();
 			MiTienda tienda = new MiTienda();
 			long t1 = System.nanoTime();
-			tienda.particionar(getArray());
+			tienda.getArray();
 			long t = System.nanoTime() - t1;
 
 			System.out.println("t(ms) = " + t / 1000000 + " ms");
@@ -33,32 +33,4 @@ public class Principal {
 		}
 	}
 
-	private static String[] getArray() {
-		BufferedReader bufferLectura = null;
-		String[]campos=new String[10000];
-        try {
-            bufferLectura = new BufferedReader(new FileReader(".\\src\\archivos\\RegistrosBase.csv"));
-            String linea = bufferLectura.readLine();
-            linea = bufferLectura.readLine();
-            int i = 0;
-            
-            while (linea != null) {
-                campos[i] = linea;
-                i=i+1;
-                linea = bufferLectura.readLine();
-            }
-            
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (bufferLectura != null) {
-                try {
-                    bufferLectura.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return campos;
-	}
 }

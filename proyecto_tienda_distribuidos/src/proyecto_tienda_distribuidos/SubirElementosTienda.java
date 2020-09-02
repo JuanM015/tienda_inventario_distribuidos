@@ -116,26 +116,6 @@ public class SubirElementosTienda implements Callable<Boolean>{
 		}
 	}
 
-//	private int obtenerCategoria(String category_name) {
-//		int category_id = 0;
-//		try {
-//			Connection conexion = ConexionDataBase.crearConexion();
-//			ConexionDataBase.sentencia = conexion.createStatement();
-//			String query = "SELECT category_id FROM category where category_name='" + category_name + "'";
-//			ConexionDataBase.resultado = ConexionDataBase.sentencia.executeQuery(query);
-//
-//			while (ConexionDataBase.resultado.next()) {
-//				category_id = ConexionDataBase.resultado.getInt("category_id");
-//			}
-//
-//			ConexionDataBase.cerrarConexion();
-//
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//		}
-//		return category_id;
-//	}
-
 	@Override
 	public Boolean call() throws Exception {
 		// TODO Auto-generated method stub
