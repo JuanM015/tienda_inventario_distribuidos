@@ -22,12 +22,14 @@ private static final int CHUNK_SIZE = 2000;
   static final String URL = "jdbc:postgresql://localhost:5432/[NOMBRE BASE DATOS]";
   
   En mi caso es así:
-  static final String URL = "jdbc:postgresql://localhost:5432/base_datos_tienda";
-	static final String USER = "postgres";
-	static final String PASS = "admin";
+  
+static final String URL = "jdbc:postgresql://localhost:5432/base_datos_tienda";
+static final String USER = "postgres";
+static final String PASS = "admin";
+  
+  5. Se adjunto la librería para postgres usada, <span style="color: red"> ella sí se deberá añadir manualmente a la aplicación </span> 
+  6. Por último para ejecutar la aplicación es a través de la clase: *Principal*, simplemente dandole en la opción de *Run*
   
   
-  5. Por último para ejecutar la aplicación es a través de la clase: *Principal*, simplemente dandole en la opción de *Run*
-  
-  
-  Nota: Agradecemos la asesoría sin embargo aún quedamos con dudas al respecto, sería posible sí después de mirar la entrega otra asesoría para solucionar dicha situación.
+  Nota: Por parte de los dos agradecemos la asesoría, sin embargo aún quedamos con dudas al respecto, sería posible sí después de mirar la entrega en otra asesoría revisar ello.
+ Agradezco la atención prestada.
