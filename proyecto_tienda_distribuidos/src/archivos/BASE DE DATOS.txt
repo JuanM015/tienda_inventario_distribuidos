@@ -1,0 +1,41 @@
+DROP TABLE IF EXISTS product_stores;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS category;
+DROP TABLE IF EXISTS store;
+
+CREATE TABLE category
+(
+    category_id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+    category_name varchar(50) UNIQUE,
+    primary key (category_id)
+);
+
+CREATE TABLE store
+(
+    store_id int,
+    store_name varchar(50),
+    primary key (store_id)
+);
+
+CREATE TABLE products
+(
+    product_id int primary key,
+    product_name varchar(250),
+    category_id int,
+    CONSTRAINT fk_category
+    FOREIGN KEY(category_id) 
+    REFERENCES category(category_id)
+);
+
+CREATE TABLE product_stores
+(
+    product_id int,
+    product_price varchar(10),
+    store_id int,
+    CONSTRAINT fk_product
+      FOREIGN KEY(product_id) 
+      REFERENCES products(product_id),
+    CONSTRAINT fk_store
+      FOREIGN KEY(store_id) 
+      REFERENCES store(store_id)
+);
